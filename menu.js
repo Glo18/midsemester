@@ -1,0 +1,34 @@
+// Personalized Greeting
+let userName = prompt("Welcome to EatNow Cafe! Please enter your first name:");
+if (!userName) {
+    userName = "Guest"; // Default name if input is empty
+}
+
+// Welcome Message
+alert(`Hello, ${userName}! Welcome to EatNow Cafe. Enjoy our delicious menu!`);
+
+// Step 3: Display Menu Items in Console
+let menuItems = [
+    "BBQ Burger",
+    "Fries",
+    "Chicken Alfredo Pasta",
+    "Beef Burger",
+    "Pilau"
+];
+
+console.log("EatNow Cafe Menu:");
+menuItems.forEach((item, index) => {
+    console.log(`${index + 1}. ${item}`);
+});
+
+// Adding a New Dish
+let newDish = prompt("Would you like to suggest a new dish for our menu? Enter it below:");
+if (newDish && newDish.trim() !== "") {
+    menuItems.push(newDish.trim()); 
+    console.log("\nUpdated Menu:");
+    menuItems.forEach((item, index) => {
+        console.log(`${index + 1}. ${item}`);
+    });
+} else {
+    console.log("No new dish added. Please enter a valid dish next time.");
+}
